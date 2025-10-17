@@ -6,9 +6,10 @@
   <title>Contacto</title>
   <link rel="stylesheet" href="../css/contacto.css">
   <link rel="shortcut icon" href="../img/WhatsApp Image 2025-09-29 at 00.46.10.webp" type="image/webp">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
   <header>
     <div class="logo">Veltronik</div>
@@ -17,7 +18,7 @@
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="./servicios.html">Servicios</a></li>
         <li><a href="./portafolio.html">Sobre Nosotros</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
+        <li><a href="./contacto.html" class="active">Contacto</a></li>
       </ul>
     </nav>
     <div class="hamburger">
@@ -30,14 +31,14 @@
   <main class="contacto">
     <section class="intro-contacto">
       <h1>¡Hagamos que tu idea despegue! 🚀</h1>
-      <p>En <strong>Veltronik</strong>, estamos listos para transformar tus sueños digitales en realidad. Escríbenos, llámanos o mándanos un WhatsApp, ¡y juntos crearemos algo épico!</p>
+      <p>En <strong>Veltronik</strong> estamos listos para transformar tus sueños digitales en realidad. Escribinos, llamanos o mandanos un WhatsApp, ¡y juntos creamos algo épico!</p>
     </section>
 
     <section class="info-contacto">
       <div class="contacto-item">
         <i class="fa-solid fa-envelope"></i>
         <h3>Email</h3>
-        <p><a href="mailto:info@veltronik.com">info@veltronik.com</a></p>
+        <p><a href="mailto:veltronikcompany@gmail.com">veltronikcompany@gmail.com</a></p>
       </div>
       <div class="contacto-item">
         <i class="fa-solid fa-map-marker-alt"></i>
@@ -47,14 +48,15 @@
       <div class="contacto-item">
         <i class="fa-solid fa-clock"></i>
         <h3>Horarios</h3>
-        <p>Lunes a Viernes: 9:00 - 19:00<br>Sábados: 9:00 - 13:00</p>
+        <p>Lunes a Viernes: 13:00 - 20:00<br>Sábados: 9:00 - 13:00</p>
       </div>
     </section>
 
     <section class="formulario-contacto">
-      <h2>Cuéntanos tu visión</h2>
-      <p class="form-intro">Completa el formulario y empecemos a construir el futuro de tu proyecto. ¡Estamos emocionados por conocerte!</p>
-      <form action="#" method="POST">
+      <h2>Contanos tu visión</h2>
+      <p class="form-intro">Completá el formulario y empecemos a construir el futuro de tu proyecto. ¡Estamos emocionados por conocerte!</p>
+
+      <form id="contactForm" method="POST" action="https://formspree.io/f/xanpvdye">
         <div class="form-group">
           <label for="nombre">Nombre *</label>
           <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
@@ -78,7 +80,7 @@
         <div class="form-group">
           <label for="servicio">Servicio de interés</label>
           <select id="servicio" name="servicio">
-            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="" disabled selected>Seleccioná un servicio</option>
             <option value="web">Desarrollo Web</option>
             <option value="wordpress">WordPress</option>
             <option value="ecommerce">E-commerce</option>
@@ -88,8 +90,8 @@
         </div>
 
         <div class="form-group">
-          <label for="mensaje">Mensaje </label>
-          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto, objetivos y cómo podemos ayudarte..." rows="5" required></textarea>
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu proyecto, objetivos y cómo podemos ayudarte..." rows="5" required></textarea>
         </div>
 
         <button type="submit" class="btn-enviar">¡Lanzar mi proyecto!</button>
@@ -97,19 +99,21 @@
     </section>
   </main>
 
-  <a href="https://wa.me/5493761234567" target="_blank" class="whatsapp-fixed">
+  <a href="https://wa.me/5493764224611?text=Hola%20Veltronik,%20quiero%20consultar%20por%20un%20desarrollo%20de%20software" target="_blank" class="whatsapp-fixed">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-<footer class="footer">
-  <div class="footer-content">
-        <p>© 2025 Veltronik. Todos los derechos reservados.</p>
-        <div class="icons">
-            <a href="https://www.instagram.com/veltronik_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/veltronik" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Veltronik. Todos los derechos reservados.</p>
+      <div class="icons">
+        <a href="https://www.instagram.com/veltronik_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/veltronik" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="../main.js"></script>
 </body>
-<script src="../main.js"></script>
 </html>

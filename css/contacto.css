@@ -223,7 +223,30 @@ nav a:hover {
   background-color: #fff;
 }
 
-/* WhatsApp Fixed Icon */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  font-size: 1rem;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px #00e5ff55;
+}
+
+option {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+
 .whatsapp-fixed {
   position: fixed;
   bottom: 20px;
