@@ -1,71 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veltronik - Desarrollo de Software</title>
-  <link rel="shortcut icon" href="./img/WhatsApp Image 2025-09-29 at 00.46.10.webp" type="image/webp">
-  <link rel="stylesheet" href="./index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veltronik | Desarrollo de Software y Soluciones Digitales</title>
+    <meta name="description" content="Agencia de desarrollo de software y diseño web en Argentina. Transformamos tu negocio con soluciones digitales a medida.">
+    <link rel="shortcut icon" href="./img/WhatsApp Image 2025-09-29 at 00.46.10.webp" type="image/webp">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="logo">Veltronik</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="./pages/servicios.html">Servicios</a></li>
-        <li><a href="./pages/portafolio.html">Sobre Nosotros</a></li>
-        <li><a href="./pages/contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Veltronik<span class="dot">.</span></a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#proceso" class="nav-link">Proceso</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/5491100000000" target="_blank" class="btn btn-outline">WhatsApp</a>
+                <button class="hamburger" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Innovación Digital para Pymes</span>
+                    <h1>Transformamos tu visión en <span class="gradient-text">software de alto impacto</span></h1>
+                    <p>Diseñamos sitios web y sistemas a medida que ayudan a emprendedores y empresas argentinas a vender más y operar mejor.</p>
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn btn-primary">Cotizar Proyecto</a>
+                        <a href="#proyectos" class="btn btn-secondary">Ver Portafolio</a>
+                    </div>
+                </div>
+                <!-- Abstract visual element could go here via CSS -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="section services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestras Soluciones</h2>
+                    <p>Tecnología estratégica para hacer crecer tu negocio.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card service-card">
+                        <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Sitios modernos, rápidos y optimizados para SEO. Desde landing pages hasta e-commerce completos.</p>
+                    </div>
+                    <div class="card service-card">
+                        <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Software a Medida</h3>
+                        <p>Sistemas de gestión, CRMs y plataformas web diseñadas específicamente para tus procesos.</p>
+                    </div>
+                    <div class="card service-card">
+                        <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
+                        <h3>Automatización & IA</h3>
+                        <p>Chatbots inteligentes y automatizaciones para ahorrar tiempo y mejorar la atención al cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="proceso" class="section process">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Cómo Trabajamos</h2>
+                    <p>Un proceso transparente y ágil, de principio a fin.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <h3>Descubrimiento</h3>
+                        <p>Analizamos tu negocio y definimos los objetivos clave del proyecto.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <h3>Diseño & Estrategia</h3>
+                        <p>Creamos prototipos y definimos la arquitectura tecnológica ideal.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <h3>Desarrollo</h3>
+                        <p>Programamos tu solución con código limpio y tecnologías modernas.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">04</div>
+                        <h3>Lanzamiento</h3>
+                        <p>Publicamos tu proyecto y te capacitamos para que tomes el control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="section benefits">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-content">
+                        <h2>¿Por qué elegir Veltronik?</h2>
+                        <p>No somos solo programadores, somos tus socios tecnológicos. Entendemos el mercado argentino y lo que necesitan las Pymes para destacar.</p>
+                        <ul class="benefit-list">
+                            <li><i class="fa-solid fa-check"></i> Diseño centrado en conversión (UI/UX).</li>
+                            <li><i class="fa-solid fa-check"></i> Soporte técnico local y cercano.</li>
+                            <li><i class="fa-solid fa-check"></i> Tecnologías escalables y seguras.</li>
+                            <li><i class="fa-solid fa-check"></i> Entregas en tiempo y forma.</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-visual">
+                        <!-- CSS decorative element -->
+                        <div class="visual-box"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="section projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Proyectos Recientes</h2>
+                    <p>Resultados reales para empresas reales.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card project-card">
+                        <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a);">
+                            <!-- Placeholder for project image -->
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Indumentaria</h3>
+                            <p>Tienda online con integración de pagos y envíos automatizados.</p>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                    </div>
+                    <div class="card project-card">
+                        <div class="project-image" style="background: linear-gradient(45deg, #0f172a, #1e293b);">
+                            <!-- Placeholder for project image -->
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sistema de Gestión Pyme</h3>
+                            <p>Dashboard administrativo para control de stock y facturación.</p>
+                            <span class="tag">Web App</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contacto" class="section cta">
+            <div class="container cta-container">
+                <h2>¿Listo para digitalizar tu negocio?</h2>
+                <p>Hablemos sobre tu proyecto y llevemos tu idea al siguiente nivel.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5491100000000" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp</a>
+                    <a href="mailto:contacto@veltronik.com" class="btn btn-outline-light">Enviar Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">Veltronik<span class="dot">.</span></div>
+                <p>Desarrollo de software y diseño web para el futuro.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/veltronik_/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/veltronik" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Veltronik. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Usamos cookies para mejorar tu experiencia. Al navegar, aceptás nuestra política.</p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="btn-sm">Aceptar</button>
+            <button id="decline-cookies" class="btn-sm btn-text">Rechazar</button>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Innovación y Tecnología a tu Alcance</h1>
-        <p>Desarrollamos software a medida para impulsar tu negocio al futuro digital.</p>
-        <a href="./pages/contacto.html" class="btn">Contáctanos</a>
-      </div>
-    </section>
-
-    <section class="about">
-      <h2>¿Por Que Elegir Veltronik?</h2>
-      <p>En Veltronik combinamos diseño, desarrollo y tecnología de vanguardia. Integramos inteligencia artificial y chatbots para que tu página web no solo luzca profesional, sino que también trabaje por vos, ofreciendo experiencias rápidas, inteligentes y personalizadas a tus clientes.</p>
-    </section>
-  </main>
-
-<footer class="footer">
-  <div class="footer-content">
-    <p>© 2025 Veltronik. Todos los derechos reservados.</p>
-    <div class="icons">
-      <a href="https://www.instagram.com/veltronik_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://github.com/veltronik" target="_blank"><i class="fa-brands fa-github"></i></a>
-    </div>
-  </div>
-</footer>
-
-<div id="cookie-banner" class="cookie-banner">
-  <p>
-    Utilizamos cookies para mejorar tu experiencia, analizar el tráfico y ofrecerte contenido personalizado.
-    Al continuar navegando, aceptás nuestra política de cookies.
-  </p>
-  <div class="cookie-buttons">
-    <button id="accept-cookies">Aceptar</button>
-    <button id="decline-cookies">Rechazar</button>
-  </div>
-</div>
-
-<script src="./cookies.js"></script>
-
+    <script src="./main.js"></script>
+    <script src="./cookies.js"></script>
+    <script src="//code.tidio.co/hjrryiauskkaxeephfqnpzgtfg1jr5ow.js" async></script>
 </body>
-<script src="./main.js"></script>
-<script src="//code.tidio.co/hjrryiauskkaxeephfqnpzgtfg1jr5ow.js" async></script>
 </html>

@@ -1,61 +1,65 @@
+// Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('.nav');
+const navLinks = document.querySelectorAll('.nav-link');
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
+if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
 }
 
+// Cookie Banner Logic
 document.addEventListener('DOMContentLoaded', () => {
-  const banner = document.getElementById('cookie-banner');
-  const acceptBtn = document.getElementById('accept-cookies');
-  const declineBtn = document.getElementById('decline-cookies');
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
 
-  if (!banner || !acceptBtn || !declineBtn) return;
+    if (!banner || !acceptBtn || !declineBtn) return;
 
-  const userChoice = localStorage.getItem('veltronik_cookies');
+    const userChoice = localStorage.getItem('veltronik_cookies');
 
-  banner.style.display = userChoice ? 'none' : 'flex';
+    if (!userChoice) {
+        banner.style.display = 'flex';
+    }
 
-  acceptBtn.addEventListener('click', () => {
-    localStorage.setItem('veltronik_cookies', 'accepted');
-    banner.style.display = 'none';
-    console.log('✅ Cookies aceptadas');
-  });
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('veltronik_cookies', 'accepted');
+        banner.style.display = 'none';
+    });
 
-  declineBtn.addEventListener('click', () => {
-    localStorage.setItem('veltronik_cookies', 'declined');
-    banner.style.display = 'none';
-    console.log('❌ Cookies rechazadas');
-  });
+    declineBtn.addEventListener('click', () => {
+        localStorage.setItem('veltronik_cookies', 'declined');
+        banner.style.display = 'none';
+    });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
+// Smooth Scroll for Anchor Links (Optional, as CSS scroll-behavior usually handles this)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // Adjust for fixed header
+            const headerOffset = 70;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        alert('✅ Mensaje enviado. ¡Gracias por contactarte con Veltronik!');
-        form.reset();
-      } else {
-        alert('⚠️ Hubo un error al enviar el mensaje. Intentalo de nuevo.');
-      }
-    } catch (error) {
-      console.error('❌ Error:', error);
-      alert('❌ Error de red o conexión. Verificá tu internet.');
-    }
-  });
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    });
 });
